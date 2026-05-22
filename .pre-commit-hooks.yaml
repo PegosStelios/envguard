@@ -1,0 +1,7 @@
+- id: envguard
+  name: envguard
+  description: Scan for leaked secrets and verify .env/.env.example parity.
+  entry: envguard check
+  language: python
+  pass_filenames: false
+  stages: [commit]
