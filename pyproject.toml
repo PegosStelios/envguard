@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "envguard"
+version = "0.1.0"
+description = "Scan repos for leaked secrets and verify .env/.env.example parity."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Stelios Pegos" }]
+dependencies = [
+  "pathspec>=0.12",
+  "colorama>=0.4; platform_system == 'Windows'",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-cov>=5.0"]
+
+[project.scripts]
+envguard = "envguard.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
