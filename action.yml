@@ -1,4 +1,4 @@
-name: envguard
+name: envguardian
 description: Scan for leaked secrets and verify .env/.env.example parity.
 branding:
   icon: shield

@@ -14,7 +14,7 @@ def run(*args: str, cwd: Path | None = None) -> subprocess.CompletedProcess:
 def test_version_flag():
     r = run("--version")
     assert r.returncode == 0
-    assert "0.1.1" in r.stdout
+    assert "0.1.2" in r.stdout
 
 
 def test_scan_clean_exits_zero(tmp_path: Path):
