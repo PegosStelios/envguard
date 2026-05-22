@@ -1,0 +1,18 @@
+name: envguard
+description: Scan for leaked secrets and verify .env/.env.example parity.
+inputs:
+  path:
+    description: Directory to scan.
+    required: false
+    default: "."
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@v5
+      with:
+        python-version: "3.11"
+    - shell: bash
+      run: pip install .
+      working-directory: ${{ github.action_path }}
+    - shell: bash
+      run: envguard check --path ${{ inputs.path }} --format json
