@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "envguard"
-version = "0.1.0"
+version = "0.1.1"
 description = "Scan repos for leaked secrets and verify .env/.env.example parity."
 readme = "README.md"
 license = { text = "MIT" }

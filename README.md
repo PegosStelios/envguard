@@ -27,7 +27,7 @@ Exit codes: `0` clean, `1` findings, `2` usage error.
 ```yaml
 repos:
   - repo: https://github.com/<you>/envguard
-    rev: v0.1.0
+    rev: v0.1.1
     hooks:
       - id: envguard
 ```
@@ -35,7 +35,7 @@ repos:
 ## GitHub Action
 
 ```yaml
-- uses: <you>/envguard@v0.1.0
+- uses: <you>/envguard@v0.1.1
   with:
     path: .
 ```

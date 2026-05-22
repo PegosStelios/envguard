@@ -1,5 +1,8 @@
 name: envguard
 description: Scan for leaked secrets and verify .env/.env.example parity.
+branding:
+  icon: shield
+  color: red
 inputs:
   path:
     description: Directory to scan.
